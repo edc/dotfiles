@@ -4,3 +4,4 @@ set -gx WORKON_HOME ~/devel/_envs/
 . ~/.config/fish/quickssh_funcs.fish
 . ~/.config/fish/keybinding.fish
 . ~/.config/fish/prompt.fish
+. ~/.config/fish/pip.fish
