@@ -3,3 +3,7 @@ fish_history
 _deprecated/vim/.netrwhist
 _deprecated/vim/bundle
 _deprecated/vim/magic.vim
+fishd.*
+__bass.py
+bass.fish
+config/nvim/.netrwhist
