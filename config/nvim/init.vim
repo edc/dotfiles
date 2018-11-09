@@ -41,7 +41,7 @@ nmap <Leader>be :BufExplorerHorizontalSplit<CR>
 
 "language server
 let g:LanguageClient_serverCommands = {
-    \ 'python': ['~/dotfiles/opt/python-language-server/venv/bin/pyls'],
+    \ 'python': ['~/opt/python-language-server/venv/bin/pyls'],
     \ 'go': ['/Users/eddie/.go-env/bin/go-langserver', '-gocodecompletion'],
     \ }
 let g:deoplete#enable_at_startup = 1
