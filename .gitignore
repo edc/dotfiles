@@ -7,3 +7,4 @@ fishd.*
 __bass.py
 bass.fish
 config/nvim/.netrwhist
+nvim.site/plugs/
