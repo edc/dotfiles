@@ -1,2 +1,5 @@
 fish_history
 *.local
+_deprecated/vim/.netrwhist
+_deprecated/vim/bundle
+_deprecated/vim/magic.vim
