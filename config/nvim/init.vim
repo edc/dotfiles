@@ -48,6 +48,8 @@ autocmd FileType python call deoplete#enable()
 autocmd FileType go call deoplete#enable()
 nmap <Leader>/ :call LanguageClient_contextMenu()<cr>
 nmap <Leader>? :call LanguageClient_textDocument_hover()<cr>
+" fix esc key issue: https://github.com/Shougo/deoplete.nvim/issues/386
+let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}
 
 "Denite
 nmap <Leader>e :Denite file_mru<cr>
@@ -68,3 +70,7 @@ nnoremap <S-h> :call ToggleHideStatus()<CR>
 call ToggleHideStatus()
 
 autocmd InsertEnter,InsertLeave * set cul!
+
+if empty($CONDA_PREFIX) == 0
+    let $VIRTUAL_ENV = $CONDA_PREFIX
+endif
