@@ -44,7 +44,8 @@ let g:LanguageClient_serverCommands = {
     \ 'python': ['~/opt/python-language-server/venv/bin/pyls'],
     \ 'go': ['/Users/eddie/.go-env/bin/go-langserver', '-gocodecompletion'],
     \ }
-let g:deoplete#enable_at_startup = 1
+autocmd FileType python call deoplete#enable()
+autocmd FileType go call deoplete#enable()
 nmap <Leader>/ :call LanguageClient_contextMenu()<cr>
 nmap <Leader>? :call LanguageClient_textDocument_hover()<cr>
 
@@ -65,3 +66,5 @@ endfunction
 
 nnoremap <S-h> :call ToggleHideStatus()<CR>
 call ToggleHideStatus()
+
+autocmd InsertEnter,InsertLeave * set cul!
