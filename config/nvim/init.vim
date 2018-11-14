@@ -51,3 +51,17 @@ nmap <Leader>? :call LanguageClient_textDocument_hover()<cr>
 "Denite
 nmap <Leader>e :Denite file_mru<cr>
 nmap <c-p> :Denite -path=<C-R>=denite#project#path2project_directory(expand('%:p'), '')<CR> file/rec<cr>
+
+let s:hidden_status = 0
+function! ToggleHideStatus()
+    if s:hidden_status == 0
+        let s:hidden_status = 1
+        set laststatus=0
+    else
+        let s:hidden_status = 0
+        set laststatus=2
+    endif
+endfunction
+
+nnoremap <S-h> :call ToggleHideStatus()<CR>
+call ToggleHideStatus()
