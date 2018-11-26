@@ -36,3 +36,4 @@ alias djtest "python manage.py test --run-all"
 alias gfom "git fetch origin master"
 
 . ~/.secrets.fish
+. ~/.local-config.fish
