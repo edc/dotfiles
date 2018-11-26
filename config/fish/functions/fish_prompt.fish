@@ -8,7 +8,11 @@ function fish_prompt
     end
     set_color $fish_color_cwd
     if test (uname) = 'Linux'
-        echo -ne '\xce\xbb '
+        if test $TERM = 'screen'
+            echo -ne '\xce\xbbs '
+	else
+            echo -ne '\xce\xbb '
+        end
     end
     if test (uname) = 'Darwin'
         echo -ne '\xef\xa3\xbf '
