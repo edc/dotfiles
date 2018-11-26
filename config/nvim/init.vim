@@ -74,3 +74,5 @@ autocmd InsertEnter,InsertLeave * set cul!
 if empty($CONDA_PREFIX) == 0
     let $VIRTUAL_ENV = $CONDA_PREFIX
 endif
+
+vmap Y "*y
